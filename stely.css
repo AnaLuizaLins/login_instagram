@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.logoFace{
+    height: 25px;
+
+}
+
+button{
+    background-color:#1d44bB;
+    color: white;
+    padding: 10px 100px;  
+    border: none;
+    border-radius: 5px;        
+    cursor: pointer;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    align-items: center;
+    border: 2px solid grey;
+    margin: 10px;
+    width: 400px;
+    height: 800px;
+}
+
+.logoInst{
+    height: 150px;
+    width: 150px;
+}
+
+p{
+    color: gray;
+    align-items: center;
+}
+
+a{
+    color: #1d44bB;
+}
+
+span{
+    color: gray;
+    margin: 3px;
+}
+
+.face{
+    margin: 10px;
+}
