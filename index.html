@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,22 +11,69 @@
 <main class="container">
     <img class="logoInst" src="logo-insta-removebg-preview.png" alt="">
     <p>Registra-te para veres as fotos e os <br> vídeos dos teus amigos.</p>
-    <button class="face">Iniciar sessão com Faceboock</button>
+    <button class="face">Iniciar sessão com Facebook</button>
     <span>ou</span>
     <hr>
 
-<input type="text" id = "nome" name="nome" placeholder="Número de tefone ou e-mail"><br><br>
-<input type="text" id = "palavra" name="palavra" placeholder="Plavra-passe"><br><br>
-<input type="text" id = "palavra" name="palavra" placeholder="Plavra-passe"><br><br>
-<input type="text" id = "palavra" name="palavra" placeholder="Nome Completo"><br><br>
-<input type="text" id = "palavra" name="palavra" placeholder="Nome de utilidazor"><br><br>
+    <input type="text" id="numero" placeholder="(XX) XXXXX-XXXX"><br><br>
+    <input type="text" id="email" placeholder="e-mail"><br><br>
+    <input type="text" id="passe" placeholder="Palavra-passe"><br><br>
+    <input type="text" id="nome" placeholder="Nome Completo"><br><br>
+    <input type="text" id="utilizador" placeholder="Nome de utilizador"><br><br>
 
-<p>As pessoas que usam o nosso serviço podem ter carregando as tuas informações de contato para o Instagram. <a href="">Saiba mais</a></p> <br>
-<p>
-    Com este registro aceitas os nossos <a href="">Termos</a> a <a href="">Política de privacidade</a> e a<a href="">Política de Cookies.</a>
-</p>
-<br> 
-<button>Registrar</button>
+    <p>As pessoas que usam o nosso serviço podem ter carregado as tuas informações de contato para o Instagram. <a href="">Saiba mais</a></p> <br>
+    <p>
+        Com este registro aceitas os nossos <a href="">Termos</a>, a <a href="">Política de privacidade</a> e a <a href="">Política de Cookies</a>.
+    </p>
+    <br> 
+    <button onclick="verificarCampo()">Registrar</button>
+
+    <script>
+        function verificarCampo() {
+            let numero = document.getElementById("numero");
+            let email = document.getElementById("email");
+            let passe = document.getElementById("passe");
+            let nome = document.getElementById("nome");
+            let utilizador = document.getElementById("utilizador");
+
+            // Limpando as classes 'vazio' de todos os campos
+            numero.classList.remove("vazio");
+            email.classList.remove("vazio");
+            passe.classList.remove("vazio");
+            nome.classList.remove("vazio");
+            utilizador.classList.remove("vazio");
+
+            // Flag para verificar se algum campo está vazio
+            let campoVazio = false;
+
+            // Verificando se algum campo está vazio
+            if (numero.value.trim() === "") {
+                numero.classList.add("vazio");
+                campoVazio = true;
+            }
+            if (email.value.trim() === "") {
+                email.classList.add("vazio");
+                campoVazio = true;
+            }
+            if (passe.value.trim() === "") {
+                passe.classList.add("vazio");
+                campoVazio = true;
+            }
+            if (nome.value.trim() === "") {
+                nome.classList.add("vazio");
+                campoVazio = true;
+            }
+            if (utilizador.value.trim() === "") {
+                utilizador.classList.add("vazio");
+                campoVazio = true;
+            }
+            if (campoVazio) {
+                alert("Ainda existe campo vazio! Por favor, preencha todos.");
+            } else {
+                window.location.href = "Bem-Vindo.html?nome=" + encodeURIComponent(nome.value);
+            }
+        }
+    </script>
 
 </main>
 

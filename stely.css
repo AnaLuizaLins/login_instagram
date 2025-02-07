@@ -1,24 +1,23 @@
-*{
+* {
     margin: 0;
     padding: 0;
     color: white;
 }
 
-.logoFace{
+.logoFace {
     height: 25px;
-
 }
 
-button{
-    background-color:#1d44bB;
+button {
+    background-color: #1d44bb;
     color: white;
-    padding: 10px 100px;  
+    padding: 10px 100px;
     border: none;
-    border-radius: 5px;        
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -27,28 +26,41 @@ button{
     border: 2px solid grey;
     margin: 10px;
     width: 400px;
-    height: 800px;
+    height: 1000px;
 }
 
-.logoInst{
+.logoInst {
     height: 150px;
     width: 150px;
 }
 
-p{
+p {
     color: gray;
     align-items: center;
 }
 
-a{
-    color: #1d44bB;
+a {
+    color: #1d44bb;
 }
 
-span{
+span {
     color: gray;
     margin: 3px;
 }
 
-.face{
+.face {
     margin: 10px;
+}
+
+input {
+    color: black;
+    padding: 10px;
+    border: 10px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+input.vazio {
+    border: 2px solid red;
+    background-color: #ffcccc;
 }
