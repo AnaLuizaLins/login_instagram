@@ -36,17 +36,14 @@
             let nome = document.getElementById("nome");
             let utilizador = document.getElementById("utilizador");
 
-            // Limpando as classes 'vazio' de todos os campos
             numero.classList.remove("vazio");
             email.classList.remove("vazio");
             passe.classList.remove("vazio");
             nome.classList.remove("vazio");
             utilizador.classList.remove("vazio");
 
-            // Flag para verificar se algum campo está vazio
             let campoVazio = false;
 
-            // Verificando se algum campo está vazio
             if (numero.value.trim() === "") {
                 numero.classList.add("vazio");
                 campoVazio = true;
